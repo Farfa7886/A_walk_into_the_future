@@ -32,6 +32,7 @@ import Tutorial from './components/Tutorial.vue'
                 <div class="flex-none hidden lg:block">
                     <ul class="menu menu-horizontal">
                         <!-- Navbar menu content here -->
+                        <li style="margin-right: 50px;" onclick="tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView()"><a>Open tutorial</a></li>
                         <li v-on:click="switchPage('game')"><a>Play game</a></li>
                         <li v-on:click="switchPage('description')"><a>Description</a></li>
                         <li v-on:click="switchPage('changelog')"><a>Changelog</a></li>
@@ -66,6 +67,8 @@ import Tutorial from './components/Tutorial.vue'
                 <li v-on:click="switchPage('game')"><a>Play game</a></li>
                 <li v-on:click="switchPage('description')"><a>Description</a></li>
                 <li v-on:click="switchPage('changelog')"><a>Changelog</a></li>
+                <div class="divider"></div>
+                <li onclick="tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView()"><a>Open tutorial</a></li>
             </ul>
         </div>
     </div>
@@ -187,6 +190,7 @@ localforage.getItem('firstTime', function (err, value) {
         localforage.setItem("firstTime", false)
     }
 });
+
 </script>
 <style scoped>
 </style>
