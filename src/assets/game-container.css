@@ -1,0 +1,24 @@
+#game-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#embedded-game {
+    height: 100%; 
+    width: 100%;
+    border: 20vh;
+    border-color: aqua;
+}
+
+#floatdiv {
+    position: absolute;
+    top: 90%;
+    left: 15px;
+    z-index: 1;
+}
+
+#pageContent-game {
+    width: 100%;
+    height: 100%;
+}

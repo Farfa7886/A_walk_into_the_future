@@ -1,0 +1,30 @@
+#main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;  /* centers vertically */
+    justify-content: center; /* centers horizontally */
+    overflow-y: auto;
+}
+
+.collapse {
+    margin-bottom: 30px;
+}
+
+#center-div-cl-prev {
+    overflow-y: auto;
+    height: 70%;
+}
+
+#right-div-future {
+    overflow-y: auto;
+    height: 70%;
+}
+
+#left-div-current {
+    overflow-y: auto;
+    height: 70%;
+}
+
+.eeee {
+    overflow-x: auto;
+}
