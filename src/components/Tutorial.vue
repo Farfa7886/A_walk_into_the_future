@@ -26,6 +26,8 @@
             <div style="display: flex; justify-content: center; margin-top: 20px" id="1-tuto">
                 <p style="margin-right: 50px;"><strong style="color:red">Red: </strong>movement</p>
                 <p style="margin-right: 50px;"><strong style="color:#FF3DCB">Fuchisa: </strong>camera controls</p>
+                <p style="margin-right: 50px;"><strong style="color:#32BAFF">Blue: </strong>jump</p>
+                <p style="margin-right: 50px;"><strong style="color:#FFCC14">Yellow: </strong>sprint</p>
             </div>
         </div>
     </div>

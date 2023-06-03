@@ -85,10 +85,6 @@ import Tutorial from './components/Tutorial.vue'
         </form>
     </dialog>
 </main>
-<noscript>
-    Please enable javascript
-</noscript>
-  
 </template>
 
 <script>
