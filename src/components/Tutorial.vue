@@ -9,10 +9,10 @@
                     <div class="align-middle">
                         <img src="../assets/images/controls-it.png">
                         <div style="display: flex; justify-content: center; margin-top: 20px" id="1-tuto">
-                            <p style="margin-right: 50px;"><strong style="color:red">Rosso: </strong>movimento</p>
-                            <p style="margin-right: 50px;"><strong style="color:#32BAFF">Blu: </strong> salta</p>
-                            <p style="margin-right: 50px;"><strong style="color:#FFCC14">Giallo: </strong>accelera</p>
-                            <p style="margin-right: 50px;"><strong style="color:#FF3DCB">Fucsia (ESC): </strong>sblocca mouse</p>
+                            <p style="margin-right: 50px;"><strong style="color:red">Red: </strong>movement</p>
+                            <p style="margin-right: 50px;"><strong style="color:#32BAFF">Blue: </strong>jump</p>
+                            <p style="margin-right: 50px;"><strong style="color:#FFCC14">Yellow: </strong>sprint</p>
+                            <p style="margin-right: 50px;"><strong style="color:#FF3DCB">Fuchisa (ESC): </strong>unlock mouse</p>
                         </div>
                         <div style="display: flex; justify-content: center; margin-top: 20px">
                             <p><strong>Use the mouse to control the camera</strong></p>
@@ -24,8 +24,8 @@
         <div id="mobile-tutorial">
             <img id="tutorial-phone" src="../assets/images/controls-mobile.png">
             <div style="display: flex; justify-content: center; margin-top: 20px" id="1-tuto">
-                <p style="margin-right: 50px;"><strong style="color:red">Rosso: </strong>movimento</p>
-                <p style="margin-right: 50px;"><strong style="color:#FF3DCB">Fucsia (ESC): </strong>controlli della visuale</p>
+                <p style="margin-right: 50px;"><strong style="color:red">Red: </strong>movement</p>
+                <p style="margin-right: 50px;"><strong style="color:#FF3DCB">Fuchisa: </strong>camera controls</p>
             </div>
         </div>
     </div>
