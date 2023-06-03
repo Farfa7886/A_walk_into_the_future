@@ -1,9 +1,11 @@
 <script setup>
+import Swal from 'sweetalert2'
+import localforage from 'localforage'
 import Game from './components/game/game.vue'
 import Footer from './components/footer.vue'
 import Changelog from './components/Changelog.vue'
 import Description from './components/Description.vue'
-import Swal from 'sweetalert2'
+import Tutorial from './components/Tutorial.vue'
 </script>
 
 <template>
@@ -68,6 +70,17 @@ import Swal from 'sweetalert2'
         </div>
     </div>
     <Footer />
+    <dialog id="tutorialModal" class="modal" style="overflow: hidden;">
+        <form method="dialog" class="modal-box w-11/12 max-w-7xl">
+            <h3 class="font-bold text-lg" id="tutorial-modal-title">Tutorial</h3>
+            <div style="overflow-y: auto">
+                <Tutorial />
+            </div>
+            <div class="modal-action">
+                <button button class="btn" @click="switchPage('game')">Close</button>
+            </div>
+        </form>
+    </dialog>
 </main>
 <noscript>
     Please enable javascript
@@ -162,6 +175,18 @@ function switchPage(page) {
     console.error("The only ammitted values are 'game', 'changelog' and 'description', the value currently selected is '" + page + "'")
   }
 }
+
+localforage.getItem('firstTime', function (err, value) {
+    if(err) {
+        throw err
+    }
+    if (value == null) {
+        tutorialModal.showModal()
+        document.getElementById("tutorial-modal-title").scrollIntoView()
+        hide('pageContent-game')
+        localforage.setItem("firstTime", false)
+    }
+});
 </script>
 <style scoped>
 </style>

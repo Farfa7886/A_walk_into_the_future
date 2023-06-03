@@ -22,3 +22,13 @@
     width: 100%;
     height: 100%;
 }
+
+.centerItems {
+    display: flex;
+    align-items: center; /* center items vertically */
+    justify-content: center; /* center items horizontally */
+}
+
+.scrollable {
+    overflow-y: auto;
+}
