@@ -1,5 +1,8 @@
 <script setup>
-    import Past_versions from './Past-versions-changelog.vue'
+    import * as utils from './scripts/utils'
+    import PastVersions from './changelog/PastVersion.vue'
+    import CurrentVersion from './changelog/CurrentVersion.vue'
+    import FutureVersion from './changelog/FutureVersion.vue'
 </script>
 
 <template>
@@ -7,47 +10,29 @@
         <div id="center-div-cl-prev">
             <p class="text-3xl" style="margin-bottom: 50px">Previous versions</p>
             <div class="divider"></div>
-            <Past_versions />
+            <PastVersions />
         </div>
         <div id="left-div-current">
             <p class="text-3xl" style="margin-bottom: 50px">Current version</p>
             <div class="divider"></div>
-            <div class="collapse bg-base-200 collapse-arrow border border-base-300">
-                <input type="checkbox" /> 
-                <div class="collapse-title text-xl font-medium">
-                    ALPHA 7
-                </div>
-                <div class="collapse-content eeee"> 
-                    <pre>
-[  RE-DONE  ] Game container site
-[   ADDED   ] Rooms for the visitable house
-[  IMPROVED ] Touch screen support
-[  IMPROVED ] Mobile support
-[  IMPROVED ] Invisible walls
-[  IMPROVED ] Guidance signs
-[   BUGFIX  ] Game not loading on some mobile devices
-[  IMPROVED ] Solar panels are now not randomly placed
-                    </pre>
-                </div>
-            </div>
+            <CurrentVersion />
         </div>
         <div id="right-div-future">
             <p class="text-3xl" style="margin-bottom: 50px">Incoming features for the next versions</p>
             <div class="divider"></div>
-            <div class="collapse bg-base-200 collapse-arrow border border-base-300">
-                <input type="checkbox" /> 
-                <div class="collapse-title text-xl font-medium">
-                    ALPHA 8
-                </div>
-                <div class="collapse-content eeee"> 
-                    <pre>
-[ CONFIRMED ] More details to the map
-[ CONFIRMED ] New building
-[  PROBABLY ] <strong>Android</strong> app
-                    </pre>
-                </div>
-            </div>
+            <FutureVersion />
         </div>
+    </div>
+    <div id="mobile-layout">
+        <p class="text-3xl" style="margin-bottom: 50px">Current version</p>
+        <div class="divider"></div>
+        <CurrentVersion />
+        <p class="text-3xl" style="margin-bottom: 50px">Incoming features for the next versions</p>
+        <div class="divider"></div>
+        <FutureVersion />
+        <p class="text-3xl" style="margin-bottom: 50px">Previous versions</p>
+        <div class="divider"></div>
+        <PastVersions />
     </div>
 </template>
 
@@ -56,5 +41,14 @@
 </style>
 
 <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (utils.isOnMobile) {
+        utils.hide('main-container')
+    }
+    else {
+        utils.hide('mobile-layout')
+    }
+});
 
 </script>

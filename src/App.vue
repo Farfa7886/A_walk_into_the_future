@@ -80,7 +80,7 @@ import Tutorial from './components/Tutorial.vue'
                 <Tutorial />
             </div>
             <div class="modal-action">
-                <button button class="btn" @click="switchPage('game')">Close</button>
+                <button button class="btn btn-primary" @click="switchPage('game')">Close</button>
             </div>
         </form>
     </dialog>

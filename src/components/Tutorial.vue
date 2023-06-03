@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <style>
     #mobile-tutorial {
         height: 100%;
+        width: auto;
     }
 
     #tutorial-phone {

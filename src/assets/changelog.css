@@ -6,6 +6,11 @@
     overflow-y: auto;
 }
 
+#mobile-layout {
+    height: 90vh;
+    overflow-y: auto;
+}
+
 .collapse {
     margin-bottom: 30px;
 }
