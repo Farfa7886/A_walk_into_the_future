@@ -1,6 +1,4 @@
-# 1Q Enea proj
-
-This template should help get you started developing with Vue 3 in Vite.
+# A walk into the future
 
 ## Recommended IDE Setup
 
