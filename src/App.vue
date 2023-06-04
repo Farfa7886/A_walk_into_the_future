@@ -1,4 +1,5 @@
 <script setup>
+import * as utils from './components/scripts/utils'
 import Swal from 'sweetalert2'
 import localforage from 'localforage'
 import Game from './components/game/game.vue'
@@ -40,7 +41,8 @@ import Tutorial from './components/Tutorial.vue'
                 </div>
             </div>
             <!-- Page content here -->
-            <div id="pageContent-game">
+            <div id="pageContentContainer">
+                <div id="pageContent-game">
                 <div id="floatdiv" class="">
                     <div class="alert shadow-lg rounded-full" style="width: 300px;" id="FloatingActionDiv">
                         <button class="btn btn-sm" id="fullscreen-btn" v-on:click="openFullscreen('embedded-game')">Switch to fullscreen</button>
@@ -59,16 +61,17 @@ import Tutorial from './components/Tutorial.vue'
             <div id="pageContent-description">
                 <Description />
             </div>
+            </div>
         </div>
         <div class="drawer-side">
-            <label for="my-drawer-3" class="drawer-overlay"></label>
-            <ul class="menu p-4 w-80 h-full bg-base-200">
+            <label for="my-drawer-3" class="drawer-overlay" id="drawer-side-overlay"></label>
+            <ul class="menu p-4 w-80 h-full bg-base-200" id="drawer-side">
                 <!-- Sidebar content here -->
-                <li v-on:click="switchPage('game')"><a>Play game</a></li>
-                <li v-on:click="switchPage('description')"><a>Description</a></li>
-                <li v-on:click="switchPage('changelog')"><a>Changelog</a></li>
+                <li v-on:click="switchPage('game', true)"><a>Play game</a></li>
+                <li v-on:click="switchPage('description', true)"><a>Description</a></li>
+                <li v-on:click="switchPage('changelog', true)"><a>Changelog</a></li>
                 <div class="divider"></div>
-                <li onclick="tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView()"><a>Open tutorial</a></li>
+                <li onclick="document.getElementById('pageContentContainer').style.display = 'none'; tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView();"><a>Open tutorial</a></li>
             </ul>
         </div>
     </div>
@@ -80,7 +83,7 @@ import Tutorial from './components/Tutorial.vue'
                 <Tutorial />
             </div>
             <div class="modal-action">
-                <button button class="btn btn-primary" @click="switchPage('game')">Close</button>
+                <button button class="btn btn-primary" @click="switchPage('game'); show('pageContentContainer')">Close</button>
             </div>
         </form>
     </dialog>
@@ -123,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (isOnMobile) {
     hide('floatdiv')
     show('alternative-fullscreen-btn')
+    isFullScreenBtnDismissed = true;
   }
 });
 
@@ -149,11 +153,14 @@ function show(element) {
 }
 
 // Switch between tabs
-function switchPage(page) {
-  hide('pageContent-changelog')
-  hide('pageContent-description')
-  hide('pageContent-game')
-  hide('alternative-fullscreen-btn')
+function switchPage(page, isOnMobile_sidebar) {
+    if (isOnMobile_sidebar) {
+        document.getElementById('drawer-side-overlay').click()
+    }
+    hide('pageContent-changelog')
+    hide('pageContent-description')
+    hide('pageContent-game')
+    hide('alternative-fullscreen-btn')
 
   if (page === 'game') {
     if (isFullScreenBtnDismissed == true) {

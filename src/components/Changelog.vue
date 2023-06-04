@@ -24,15 +24,15 @@
         </div>
     </div>
     <div id="mobile-layout">
-        <p class="text-3xl" style="margin-bottom: 50px">Current version</p>
+        <p class="text-3xl changelog-card-mobile" style="margin-bottom: 50px">Current version</p>
         <div class="divider"></div>
-        <CurrentVersion />
-        <p class="text-3xl" style="margin-bottom: 50px">Incoming features for the next versions</p>
+        <div class="changelog-card-mobile"><CurrentVersion /></div>
+        <p class="text-3xl changelog-card-mobile" style="margin-bottom: 50px">Incoming features for the next versions</p>
         <div class="divider"></div>
-        <FutureVersion />
-        <p class="text-3xl" style="margin-bottom: 50px">Previous versions</p>
+        <div class="changelog-card-mobile"><FutureVersion /></div>
+        <p class="text-3xl changelog-card-mobile" style="margin-bottom: 50px">Previous versions</p>
         <div class="divider"></div>
-        <PastVersions />
+        <div class="changelog-card-mobile"><PastVersions /></div>
     </div>
 </template>
 

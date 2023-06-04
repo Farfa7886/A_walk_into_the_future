@@ -6,9 +6,11 @@
                 </div>
                 <div class="collapse-content eeee"> 
                     <pre>
+[ CONFIRMED ] <strong>New building</strong>
 [ CONFIRMED ] More details to the map
-[ CONFIRMED ] New building
+[ CONFIRMED ] More info labels
 [  PROBABLY ] <strong>Android</strong> app
+[  PROBABLY ] Sounds
                     </pre>
                 </div>
             </div>

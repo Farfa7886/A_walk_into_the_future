@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     #tutorial-phone {
-        height: 70%;
-        width: auto;
+        height: auto;
+        width: 100%;
     }
 </style>

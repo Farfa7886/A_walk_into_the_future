@@ -13,6 +13,7 @@
 
 .collapse {
     margin-bottom: 30px;
+    max-width: 500px;
 }
 
 #center-div-cl-prev {
@@ -32,4 +33,16 @@
 
 .eeee {
     overflow-x: auto;
+}
+
+.changelog-cards {
+    width: 100%;
+    margin: auto;
+    display: flex; /* sets the flex container */
+    justify-content: center; /* horiztonally centers items */
+}
+
+.changelog-card-mobile {
+    width: 90%;
+    margin-left: 3%;
 }
