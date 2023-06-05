@@ -9,6 +9,7 @@
 [ CONFIRMED ] <strong>New building</strong>
 [ CONFIRMED ] More details to the map
 [ CONFIRMED ] More info labels
+[   BUGFIX  ] Fixed bathroom
 [  PROBABLY ] <strong>Android</strong> app
 [  PROBABLY ] Sounds
                     </pre>
