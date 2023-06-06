@@ -148,5 +148,19 @@
     "footer-project-name": {
         "content": "Una passeggiata nel futuro",
         "innerHTML": false
+    },
+
+    "COMMENT-7": "game",
+
+    "game-rotate": {
+        "content": "Per favore ruota il tuo dispositivo",
+        "innerHTML": false
+    },
+
+    "COMMENT-8": "mainApp",
+
+    "fullscreen-mobile": {
+        "content": "SCHERMO INTERO",
+        "innerHTML": false
     }
 }

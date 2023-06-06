@@ -7,7 +7,7 @@
     <div id="rotate-screen" class="centerItems" style="height: 100%; position: relative;">
         <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_Yr5Ndi.json"  background="transparent"  speed="1" style="width: 100%; height: 300px;"  loop  autoplay></lottie-player>
         <div style="display: flex; justify-content: center; margin-top: 20px">
-            <p><strong>Please rotate your phone</strong></p>
+            <p><strong id="game-rotate">Please rotate your phone</strong></p>
         </div>
     </div>
 </template>

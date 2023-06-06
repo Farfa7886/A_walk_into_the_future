@@ -29,7 +29,7 @@ import Tutorial from './components/Tutorial.vue'
                         </svg>
                     </label>
                 </div>
-                <div class="flex-1 px-2 mx-2"><p id="navBarTitle">Play game</p><ul class="menu menu-horizontal"><li id="alternative-fullscreen-btn" v-on:click="openFullscreen('embedded-game')" style="border: 3px solid whitesmoke; border-radius: 1vh; margin-left: 20px"><a><strong>OPEN IN FULLSCREEN</strong></a></li></ul></div>
+                <div class="flex-1 px-2 mx-2"><p id="navBarTitle">Play game</p><ul class="menu menu-horizontal"><li id="alternative-fullscreen-btn" v-on:click="openFullscreen('embedded-game')" style="border: 3px solid whitesmoke; border-radius: 1vh; margin-left: 20px"><a><strong id="fullscreen-mobile">OPEN IN FULLSCREEN</strong></a></li></ul></div>
                 <div class="flex-none hidden lg:block">
                     <ul class="menu menu-horizontal">
                         <!-- Navbar menu content here -->

@@ -148,5 +148,19 @@
     "footer-project-name": {
         "content": "A walk into the future",
         "innerHTML": false
+    },
+
+    "COMMENT-7": "game",
+
+    "game-rotate": {
+        "content": "Please rotate your phone",
+        "innerHTML": false
+    },
+
+    "COMMENT-8": "mainApp",
+
+    "fullscreen-mobile": {
+        "content": "OPEN IN FULLSCREEN",
+        "innerHTML": false
     }
 }
