@@ -9,13 +9,13 @@
                     <div class="align-middle">
                         <img src="../assets/images/controls-it.png">
                         <div style="display: flex; justify-content: center; margin-top: 20px" id="1-tuto">
-                            <p style="margin-right: 50px;"><strong style="color:red">Red: </strong>movement</p>
-                            <p style="margin-right: 50px;"><strong style="color:#32BAFF">Blue: </strong>jump</p>
-                            <p style="margin-right: 50px;"><strong style="color:#FFCC14">Yellow: </strong>sprint</p>
-                            <p style="margin-right: 50px;"><strong style="color:#FF3DCB">Fuchisa (ESC): </strong>unlock mouse</p>
+                            <p style="margin-right: 50px;" id="tutorial-pc-1"><strong style="color:red">Red: </strong>movement</p>
+                            <p style="margin-right: 50px;" id="tutorial-pc-2"><strong style="color:#32BAFF">Blue: </strong>jump</p>
+                            <p style="margin-right: 50px;" id="tutorial-pc-3"><strong style="color:#FFCC14">Yellow: </strong>sprint</p>
+                            <p style="margin-right: 50px;" id="tutorial-pc-4"><strong style="color:#FF3DCB">Fuchisa (ESC): </strong>unlock mouse</p>
                         </div>
                         <div style="display: flex; justify-content: center; margin-top: 20px">
-                            <p><strong>Use the mouse to control the camera</strong></p>
+                            <p><strong id="tutorial-lol">Use the mouse to control the camera</strong></p>
                         </div>
                     </div>
                 </div>
@@ -24,10 +24,10 @@
         <div id="mobile-tutorial">
             <img id="tutorial-phone" src="../assets/images/controls-mobile.png">
             <div style="display: flex; justify-content: center; margin-top: 20px" id="1-tuto">
-                <p style="margin-right: 50px;"><strong style="color:red">Red: </strong>movement</p>
-                <p style="margin-right: 50px;"><strong style="color:#FF3DCB">Fuchisa: </strong>camera controls</p>
-                <p style="margin-right: 50px;"><strong style="color:#32BAFF">Blue: </strong>jump</p>
-                <p style="margin-right: 50px;"><strong style="color:#FFCC14">Yellow: </strong>sprint</p>
+                <p style="margin-right: 50px;" id="tutorial-mobile-1"><strong style="color:red">Red: </strong>movement</p>
+                <p style="margin-right: 50px;" id="tutorial-mobile-2"><strong style="color:#FF3DCB">Fuchisa: </strong>camera controls</p>
+                <p style="margin-right: 50px;" id="tutorial-mobile-3"><strong style="color:#32BAFF">Blue: </strong>jump</p>
+                <p style="margin-right: 50px;" id="tutorial-mobile-4"><strong style="color:#FFCC14">Yellow: </strong>sprint</p>
             </div>
         </div>
     </div>

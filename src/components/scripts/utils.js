@@ -1,3 +1,11 @@
+import localforage from "localforage";
+import langs from '../../translations/languagesExport'
+import './setLanguage'
+import setTexts from "./setLanguage";
+
+
+
+
 if (screen.orientation.type === 'portrait-primary') {
     orientation = "portrait"
 } else if (screen.orientation.type === 'landscape-primary') {
@@ -32,3 +40,48 @@ export function isVisible(element) {
         return false
     }
 }
+
+export async function setup() {
+    let language;
+    if (await localforage.getItem('language') == null) {
+        language = (navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage)).split("-")[0];
+        console.log(language);
+        await localforage.setItem("language", language);
+    }
+    else {
+        try {
+            language = await localforage.getItem('language')
+        }
+        catch (e) {
+            throw [e, "; using default language english"]
+        }
+    }
+    console.log(langs)
+    setTexts(langs[language], langs.en)
+}
+
+export async function setLanguage(language, apply) {
+    let validKeys = Object.keys(langs);
+    console.log(language)
+    let islangValid = validKeys.includes(language);
+    if (islangValid) {
+        await localforage.setItem("language", language)
+    }
+    else {
+        throw "Language not valid" + "Allowed values: [" + validKeys + "]"
+    }
+
+    if (apply) {
+        setTexts(langs[language], langs.en)
+    }
+}
+
+export async function getCurrentLanguage() {
+    return await localforage.getItem('language')
+} 
+
+export function onLoad(function_run) {
+    document.addEventListener("DOMContentLoaded", function () {
+        function_run();
+    });
+} 

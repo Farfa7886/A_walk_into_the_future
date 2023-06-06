@@ -8,7 +8,7 @@
                     ALPHA 6.2
                 </div>
                 <div class="collapse-content eeee"> 
-                    <pre>
+                    <pre id="changelog-content-prevver-alpha6.2">
 [  IMPROVED ] Touch screen support
                     </pre>
                 </div>
@@ -20,7 +20,7 @@
                     ALPHA 6.1
                 </div>
                 <div class="collapse-content eeee"> 
-                    <pre>
+                    <pre id="changelog-content-prevver-alpha6.1">
 [   ADDED   ] Touch screen support
                     </pre>
                 </div>
@@ -32,7 +32,7 @@
                     ALPHA 6.1
                 </div>
                 <div class="collapse-content eeee"> 
-                    <pre>
+                    <pre id="changelog-content-prevver-alpha6">
 [   ADDED   ] Football field (with working ball!)
 [   ADDED   ] Invisible walls
 [   ADDED   ] Guidance signs

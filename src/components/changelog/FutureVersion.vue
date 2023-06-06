@@ -5,7 +5,7 @@
                     ALPHA 8
                 </div>
                 <div class="collapse-content eeee"> 
-                    <pre>
+                    <pre id="changelog-content-futurever">
 [ CONFIRMED ] <strong>New building</strong>
 [ CONFIRMED ] More details to the map
 [ CONFIRMED ] More info labels

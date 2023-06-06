@@ -1,0 +1,152 @@
+{
+    "COMMENT-1": "main page",
+    "fullscreen-btn": {
+        "content": "Utilizza schermo intero",
+        "innerHTML": false
+    },
+    "btn-open-tutorial-pc": {
+        "content": "Mostra tutorial",
+        "innerHTML": false
+    },
+    "btn-open-tutorial-mobile": {
+        "content": "Mostra tutorial",
+        "innerHTML": false
+    },
+    "modal-tutorial-close": {
+        "content": "Chiudi",
+        "innerHTML": false
+    },
+    "btn-play-game-pc": {
+        "content": "Gioca",
+        "innerHTML": false
+    },
+    "btn-play-game-mobile": {
+        "content": "Gioca",
+        "innerHTML": false
+    },
+    "btn-description-pc": {
+        "content": "Descrizione",
+        "innerHTML": false
+    },
+    "btn-description-mobile": {
+        "content": "Descrizione",
+        "innerHTML": false
+    },
+    "btn-changelog-pc": {
+        "content": "Changelog",
+        "innerHTML": false
+    },
+    "btn-changelog-mobile": {
+        "content": "Changelog",
+        "innerHTML": false
+    },
+    "COMMENT-2": "tutorial",
+
+    "tutorial-pc-1": {
+        "content": "<strong style=\"color:red\">Rosso: </strong>movimento",
+        "innerHTML": true
+    },
+    "tutorial-pc-2": {
+        "content": "<strong style=\"color:#32BAFF\">Blu: </strong>salta",
+        "innerHTML": true
+    },
+    "tutorial-pc-3": {
+        "content": "<strong style=\"color:#FFCC14\">Giallo: </strong>corri",
+        "innerHTML": true
+    },
+    "tutorial-pc-4": {
+        "content": "<strong style=\"color:#FF3DCB\">Fucsia (ESC): </strong>sblocca mouse",
+        "innerHTML": true
+    },
+    "tutorial-lol": {
+        "content": "Utilizza il mouse per muovere la visuale",
+        "innerHTML": false
+    },
+    "tutorial-mobile-1": {
+        "content": "<strong style=\"color:red\">Rosso: </strong>movimento",
+        "innerHTML": true
+    },
+    "tutorial-mobile-2": {
+        "content": "<strong style=\"color:#FF3DCB\">Fucsia: </strong>controlli della visuale",
+        "innerHTML": true
+    },
+    "tutorial-mobile-3": {
+        "content": "<strong style=\"color:#32BAFF\">Blu: </strong>salta",
+        "innerHTML": true
+    },
+    "tutorial-mobile-4": {
+        "content": "<strong style=\"color:#FFCC14\">Giallo: </strong>corri",
+        "innerHTML": true
+    },
+
+    "COMMENT-3": "changelog",
+
+    "changelog-prev-ver-pc": {
+        "content": "Versioni precedenti",
+        "innerHTML": false
+    },
+    "changelog-current-ver-pc": {
+        "content": "Versione attuale",
+        "innerHTML": false
+    },
+    "changelog-future-ver-pc": {
+        "content": "Funzionalità in arrivo per versioni future",
+        "innerHTML": false
+    },
+    "changelog-prev-ver-mobile": {
+        "content": "Versioni precedenti",
+        "innerHTML": false
+    },
+    "changelog-current-ver-mobile": {
+        "content": "Versione attuale",
+        "innerHTML": false
+    },
+    "changelog-future-ver-mobile": {
+        "content": "Funzionalità in arrivo per versioni future",
+        "innerHTML": false
+    },
+
+    "COMMENT-4": "changelog content",
+
+    "changelog-content-currentver": {
+        "content": "[  RE-DONE  ] Game container site (now with mobile phones support)\n[   ADDED   ] Rooms for the visitable house\n[  IMPROVED ] Map\n[  IMPROVED ] Game now loads faster after first start (switched hosting platform from itch.io to netlify)\n[  IMPROVED ] Mobile support\n[  IMPROVED ] Reduced render distance for better performance\n[  IMPROVED ] Invisible walls\n[  IMPROVED ] Guidance signs\n[   BUGFIX  ] Game not loading on some mobile devices",
+        "innerHTML": false
+    },
+    "changelog-content-futurever": {
+        "content": "[ CONFIRMED ] <strong>New building</strong>\n[ CONFIRMED ] More details to the map\n[ CONFIRMED ] More info labels\n[   BUGFIX  ] Fixed bathroom\n[  PROBABLY ] <strong>Android</strong> app\n[  PROBABLY ] Sounds",
+        "innerHTML": false
+    },
+    "changelog-content-prevver-alpha6.2": {
+        "content": "[  IMPROVED ] Touch screen support",
+        "innerHTML": false
+    },
+    "changelog-content-prevver-alpha6.1": {
+        "content": "[   ADDED   ] Touch screen support",
+        "innerHTML": false
+    },
+    "changelog-content-prevver-alpha6": {
+        "content": "[   ADDED   ] Football field (with working ball!)\n[   ADDED   ] Invisible walls\n[   ADDED   ] Guidance signs\n[   BUGFIX  ] Player glitching into road\n[  IMPROVED ] Solar panels are now not randomly placed",
+        "innerHTML": false
+    },
+
+
+
+    "COMMENT-5": "description",
+
+    "description": {
+        "content": "Benvenuti in \"Una passeggiata nel futuro\"<br>In questo gioco sarà possibile visitare una città ideale in cui vengono sottolineate le varie fonti di energia, le cause dell’inquinamento e dello spreco e le soluzioni che possiamo usare per prevenirli.<br>Nel gioco sono presenti brevi spiegazioni per i diversi argomenti, ognuna assegnata alla relativa struttura.<br>Vi ringraziamo dell’attenzione e buona passeggiata!",
+        "innerHTML": true
+    },
+
+
+    "COMMENT-6": "footer",
+
+    "footer-source-code": {
+        "content": "Codice sorgente disponibile su",
+        "innerHTML": false
+    },
+    "footer-project-name": {
+        "content": "Una passeggiata nel futuro",
+        "innerHTML": false
+    }
+}

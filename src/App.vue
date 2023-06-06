@@ -33,10 +33,10 @@ import Tutorial from './components/Tutorial.vue'
                 <div class="flex-none hidden lg:block">
                     <ul class="menu menu-horizontal">
                         <!-- Navbar menu content here -->
-                        <li style="margin-right: 50px;" onclick="tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView()"><a>Open tutorial</a></li>
-                        <li v-on:click="switchPage('game')"><a>Play game</a></li>
-                        <li v-on:click="switchPage('description')"><a>Description</a></li>
-                        <li v-on:click="switchPage('changelog')"><a>Changelog</a></li>
+                        <li style="margin-right: 50px;" onclick="tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView()"><a id="btn-open-tutorial-pc">Open tutorial</a></li>
+                        <li v-on:click="switchPage('game')"><a id="btn-play-game-pc">Play game</a></li>
+                        <li v-on:click="switchPage('description')"><a id="btn-description-pc">Description</a></li>
+                        <li v-on:click="switchPage('changelog')"><a id="btn-changelog-pc">Changelog</a></li>
                     </ul>
                 </div>
             </div>
@@ -67,11 +67,11 @@ import Tutorial from './components/Tutorial.vue'
             <label for="my-drawer-3" class="drawer-overlay" id="drawer-side-overlay"></label>
             <ul class="menu p-4 w-80 h-full bg-base-200" id="drawer-side">
                 <!-- Sidebar content here -->
-                <li v-on:click="switchPage('game', true)"><a>Play game</a></li>
-                <li v-on:click="switchPage('description', true)"><a>Description</a></li>
-                <li v-on:click="switchPage('changelog', true)"><a>Changelog</a></li>
+                <li v-on:click="switchPage('game', true)"><a id="btn-play-game-mobile">Play game</a></li>
+                <li v-on:click="switchPage('description', true)"><a id="btn-description-mobile">Description</a></li>
+                <li v-on:click="switchPage('changelog', true)"><a id="btn-changelog-mobile">Changelog</a></li>
                 <div class="divider"></div>
-                <li onclick="document.getElementById('pageContentContainer').style.display = 'none'; tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView();"><a>Open tutorial</a></li>
+                <li onclick="document.getElementById('pageContentContainer').style.display = 'none'; tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView();"><a id="btn-open-tutorial-mobile">Open tutorial</a></li>
             </ul>
         </div>
     </div>
@@ -83,7 +83,7 @@ import Tutorial from './components/Tutorial.vue'
                 <Tutorial />
             </div>
             <div class="modal-action">
-                <button button class="btn btn-primary" @click="switchPage('game'); show('pageContentContainer')">Close</button>
+                <button id="modal-tutorial-close" button class="btn btn-primary" @click="switchPage('game'); show('pageContentContainer')">Close</button>
             </div>
         </form>
     </dialog>
@@ -117,6 +117,8 @@ function toast(text, icon, timer, showConfirmButton, showTimerProgressBar, toast
       title: text == null ? "Please insert text" : text
     })
 }
+
+utils.setup()
 
 // Run on page load
 document.addEventListener("DOMContentLoaded", function () {

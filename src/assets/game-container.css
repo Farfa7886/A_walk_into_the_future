@@ -36,3 +36,12 @@
 .scrollable {
     overflow-y: auto;
 }
+
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;  /* centers vertically */
+    justify-content: center; /* centers horizontally */
+    overflow-y: auto;
+}

@@ -5,7 +5,7 @@
     ALPHA 7
 </div>
 <div class="collapse-content eeee"> 
-    <pre>
+    <pre id="changelog-content-currentver">
 [  RE-DONE  ] Game container site (now with mobile phones support)
 [   ADDED   ] Rooms for the visitable house
 [  IMPROVED ] Map
