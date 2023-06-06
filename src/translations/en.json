@@ -110,23 +110,23 @@
 
     "changelog-content-currentver": {
         "content": "[  RE-DONE  ] Game container site (now with mobile phones support)\n[   ADDED   ] Rooms for the visitable house\n[  IMPROVED ] Map\n[  IMPROVED ] Game now loads faster after first start (switched hosting platform from itch.io to netlify)\n[  IMPROVED ] Mobile support\n[  IMPROVED ] Reduced render distance for better performance\n[  IMPROVED ] Invisible walls\n[  IMPROVED ] Guidance signs\n[   BUGFIX  ] Game not loading on some mobile devices",
-        "innerHTML": false
+        "innerHTML": true
     },
     "changelog-content-futurever": {
         "content": "[ CONFIRMED ] <strong>New building</strong>\n[ CONFIRMED ] More details to the map\n[ CONFIRMED ] More info labels\n[   BUGFIX  ] Fixed bathroom\n[  PROBABLY ] <strong>Android</strong> app\n[  PROBABLY ] Sounds",
-        "innerHTML": false
+        "innerHTML": true
     },
     "changelog-content-prevver-alpha6.2": {
         "content": "[  IMPROVED ] Touch screen support",
-        "innerHTML": false
+        "innerHTML": true
     },
     "changelog-content-prevver-alpha6.1": {
         "content": "[   ADDED   ] Touch screen support",
-        "innerHTML": false
+        "innerHTML": true
     },
     "changelog-content-prevver-alpha6": {
         "content": "[   ADDED   ] Football field (with working ball!)\n[   ADDED   ] Invisible walls\n[   ADDED   ] Guidance signs\n[   BUGFIX  ] Player glitching into road\n[  IMPROVED ] Solar panels are now not randomly placed",
-        "innerHTML": false
+        "innerHTML": true
     },
 
 

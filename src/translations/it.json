@@ -109,24 +109,24 @@
     "COMMENT-4": "changelog content",
 
     "changelog-content-currentver": {
-        "content": "[  RE-DONE  ] Game container site (now with mobile phones support)\n[   ADDED   ] Rooms for the visitable house\n[  IMPROVED ] Map\n[  IMPROVED ] Game now loads faster after first start (switched hosting platform from itch.io to netlify)\n[  IMPROVED ] Mobile support\n[  IMPROVED ] Reduced render distance for better performance\n[  IMPROVED ] Invisible walls\n[  IMPROVED ] Guidance signs\n[   BUGFIX  ] Game not loading on some mobile devices",
-        "innerHTML": false
+        "content": "[  RE-DONE  ] Sito del contenimento del gioco (ora con il supporto completo per i telefoni)\n[   ADDED   ] Stanze per la casa visitabile\n[  IMPROVED ] Mappa\n[  IMPROVED ] Il gioco adesso si carica più velocemente dopo primo avvio (cambiata piattaforma di hosting da itch.io a netlify)\n[  IMPROVED ] Supporto per telefoni\n[  IMPROVED ] Ridotta la distanza di rendering per prestazioni migliori\n[  IMPROVED ] Muri invisibili\n[  IMPROVED ] Cartelli di guida\n[   BUGFIX  ] Gioco non si carica su alcuni dispositivi mobili",
+        "innerHTML": true
     },
     "changelog-content-futurever": {
-        "content": "[ CONFIRMED ] <strong>New building</strong>\n[ CONFIRMED ] More details to the map\n[ CONFIRMED ] More info labels\n[   BUGFIX  ] Fixed bathroom\n[  PROBABLY ] <strong>Android</strong> app\n[  PROBABLY ] Sounds",
-        "innerHTML": false
+        "content": "[ CONFIRMED ] <strong>Nuova costruzione</strong>\n[ CONFIRMED ] Più dettagli alla mappa\n[ CONFIRMED ] Più etichette di informazioni\n[   BUGFIX  ] Aggiustato il bagno\n[  PROBABLY ] App per <strong>Android</strong>\n[  PROBABLY ] Suoni",
+        "innerHTML": true
     },
     "changelog-content-prevver-alpha6.2": {
-        "content": "[  IMPROVED ] Touch screen support",
-        "innerHTML": false
+        "content": "[  IMPROVED ] Supporto per il touch screen",
+        "innerHTML": true
     },
     "changelog-content-prevver-alpha6.1": {
-        "content": "[   ADDED   ] Touch screen support",
-        "innerHTML": false
+        "content": "[   ADDED   ] Supporto per il touch screen",
+        "innerHTML": true
     },
     "changelog-content-prevver-alpha6": {
-        "content": "[   ADDED   ] Football field (with working ball!)\n[   ADDED   ] Invisible walls\n[   ADDED   ] Guidance signs\n[   BUGFIX  ] Player glitching into road\n[  IMPROVED ] Solar panels are now not randomly placed",
-        "innerHTML": false
+        "content": "[   ADDED   ] Campo da calcio (con pallone funzionante!)\n[   ADDED   ] Muri invisibili\n[   ADDED   ] Cartelli di guida\n[   BUGFIX  ] Giocatore che si blocca sulla strada\n[  IMPROVED ] I pannelli solari adesso non sono piazzati casualmente",
+        "innerHTML": true
     },
 
 
