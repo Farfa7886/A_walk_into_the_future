@@ -35,10 +35,6 @@ var chatDiv;
 var textBox;
 const uid = Math.random(10) * 8758723659782346;
 
-const agent = new https.Agent({  
-  rejectUnauthorized: false
-});
-
 utils.onLoad(() => {
     chatDiv = document.getElementById('chat-content');
     textBox = document.getElementById('chat-text-input');
