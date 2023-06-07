@@ -79,17 +79,14 @@ async function addMessage(sender, content) {
 }
 async function getChatReply(text, conversationID) {
 
-    axios.get(`http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {
-        rejectUnauthorized: false
-    })
-    .then(response => {
-        console.log(response.data)
-        // return { success: true, response: response.data['cnt'] }
-    })
-    .catch(error => {
-        console.log(response.data)
-        // return { success: false, error: error}
-    })
+    const instance = axios.create({
+  httpsAgent: new https.Agent({  
+    rejectUnauthorized: false
+  })
+});
+instance.get(`http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`).then((response) => {
+    console.log(response.data)
+})
 }
 
 /* async function chat(text, conversationID) {
