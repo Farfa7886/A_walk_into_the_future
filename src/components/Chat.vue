@@ -35,6 +35,10 @@ var chatDiv;
 var textBox;
 const uid = Math.random(10) * 8758723659782346;
 
+const agent = new https.Agent({  
+  rejectUnauthorized: false
+});
+
 utils.onLoad(() => {
     chatDiv = document.getElementById('chat-content');
     textBox = document.getElementById('chat-text-input');
@@ -80,9 +84,7 @@ async function addMessage(sender, content) {
 async function getChatReply(text, conversationID) {
 
     axios.get(`http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {
-        headers: {
-            "Content-Security-Policy": "upgrade-insecure-requests"
-        }
+        rejectUnauthorized: false
     })
     .then(response => {
         console.log(response.data)
