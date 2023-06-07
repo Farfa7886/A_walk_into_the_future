@@ -79,6 +79,8 @@ async function addMessage(sender, content) {
 }
 async function getChatReply(text, conversationID) {
 
+    axios.defaults.headers.common["Content-Security-Policy"] = "upgrade-insecure-requests";
+
     axios.get(`http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {})
     .then(response => {
         console.log(response.data)
