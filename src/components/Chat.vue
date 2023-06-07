@@ -1,8 +1,6 @@
 <script setup>
 import * as utils from './scripts/utils'
 import axios from 'axios';
-import https from 'https';
-
 
 </script>
 
@@ -55,6 +53,7 @@ async function addMessage(sender, content) {
         if (!utils.isEmpty(content)) {
             if (sender) {
                 chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`
+                chat(content, uid);
             } 
             else {
                 chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-start"><div id="${customId}" class="chat-bubble chat-bubble-accent">${content}</div></div>`
@@ -68,7 +67,7 @@ async function addMessage(sender, content) {
         if (!utils.isEmpty(content)) {
             if (sender) {
                 chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`
-                getChatReply(content, uid);
+                chat(content, uid);
             } 
             else {
                 chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-start"><div id="${customId}" class="chat-bubble chat-bubble-accent">${content}</div></div>`
@@ -81,20 +80,34 @@ async function addMessage(sender, content) {
 }
 async function getChatReply(text, conversationID) {
 
-    const instance = axios.create({
-  httpsAgent: new https.Agent({  
-    rejectUnauthorized: false
-  })
-});
-instance.get(`http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`).then((response) => {
-    console.log(response.data)
-})
+    return await axios.get(`http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {
+        rejectUnauthorized: false
+    })
 }
 
-/* async function chat(text, conversationID) {
-    let response =
-} */
+async function chat(text, conversationID) {
 
+    let reply = await getChatReply(text, conversationID)
+    addMessage(false, reply.data.cnt)
+}
+
+
+(function() {
+    var cors_api_host = 'cors-anywhere.herokuapp.com';
+    var cors_api_url = 'https://' + cors_api_host + '/';
+    var slice = [].slice;
+    var origin = window.location.protocol + '//' + window.location.host;
+    var open = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function() {
+        var args = slice.call(arguments);
+        var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
+        if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
+            targetOrigin[1] !== cors_api_host) {
+            args[1] = cors_api_url + args[1];
+        }
+        return open.apply(this, args);
+    };
+})();
 
 
 </script>
