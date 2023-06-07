@@ -1,6 +1,5 @@
 <script setup>
 import * as utils from './scripts/utils'
-import 'dotenv/config'
 import axios from 'axios';
 
 </script>
@@ -34,7 +33,7 @@ import axios from 'axios';
 
 var chatDiv;
 var textBox;
-var conversationID;
+const uid = Math.random(10) * 8758723659782346;
 
 utils.onLoad(() => {
     chatDiv = document.getElementById('chat-content');
@@ -49,7 +48,6 @@ utils.onLoad(() => {
 })
 
 async function addMessage(sender, content) {
-    console.log(process.env.CHAT_BID)
     let customId = Math.floor(Math.random(5) * 75782560);
     if (content) {
         if (!utils.isEmpty(content)) {
@@ -68,6 +66,7 @@ async function addMessage(sender, content) {
         if (!utils.isEmpty(content)) {
             if (sender) {
                 chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`
+                getChatReply(content, uid);
             } 
             else {
                 chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-start"><div id="${customId}" class="chat-bubble chat-bubble-accent">${content}</div></div>`
@@ -78,15 +77,23 @@ async function addMessage(sender, content) {
     }
     textBox.value = '';
 }
-var a;
-function getResponse(text, conversationID) {
-    axios({
-        method: 'get',
-        url: `http://api.brainshop.ai/get?bid=${process.env.CHAT}&key=sBLSCbBmENDqgBTE&uid=[uid]&msg=[msg]`
+async function getChatReply(text, conversationID) {
+
+    axios.get(`http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {})
+    .then(response => {
+        console.log(response.data)
+        // return { success: true, response: response.data['cnt'] }
     })
-    .then(function (response) {
-        response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
-    });
+    .catch(error => {
+        console.log(response.data)
+        // return { success: false, error: error}
+    })
 }
+
+/* async function chat(text, conversationID) {
+    let response =
+} */
+
+
 
 </script>
