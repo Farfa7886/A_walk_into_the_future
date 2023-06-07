@@ -93,7 +93,7 @@ async function chat(text, conversationID) {
 
 
 (function() {
-    var cors_api_host = 'cors-anywhere.herokuapp.com';
+    var cors_api_host = 'a-walk-into-the-future-proxy.vercel.app';
     var cors_api_url = 'https://' + cors_api_host + '/';
     var slice = [].slice;
     var origin = window.location.protocol + '//' + window.location.host;
