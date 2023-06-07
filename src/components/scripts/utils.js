@@ -2,6 +2,7 @@ import localforage from "localforage";
 import langs from '../../translations/languagesExport'
 import './setLanguage'
 import setTexts from "./setLanguage";
+import Swal from "sweetalert2";
 
 
 
@@ -84,4 +85,38 @@ export function onLoad(function_run) {
     document.addEventListener("DOMContentLoaded", function () {
         function_run();
     });
-} 
+}
+
+export function toast(text, icon, timer, showConfirmButton, showTimerProgressBar, toastPosition) {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: toastPosition == null ? 'top-end' : toastPosition,
+      showConfirmButton: showConfirmButton == null ? false : showConfirmButton,
+      timer: timer == null ? 3000 : timer,
+      timerProgressBar: showTimerProgressBar == null ? true : showTimerProgressBar,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+
+    Toast.fire({
+      icon: icon == null ? 'success' : icon,
+      title: text == null ? "Please insert text" : text
+    })
+}
+
+export function isEmpty(text) {
+    if (text == '' || text == null) return true
+    let splittedText = text.split('');
+    let isEmpty = true;
+    splittedText.forEach(element => {
+        if (isEmpty) {
+            if (element != ' ') {
+                isEmpty = false
+            }
+        }
+    });
+
+    return isEmpty;
+}

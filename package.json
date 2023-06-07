@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
+    "axios": "^1.4.0",
     "localforage": "^1.10.0",
     "postcss": "^8.4.24",
     "sweetalert2": "^11.7.10",
@@ -19,6 +20,10 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "daisyui": "^3.0.1",
-    "vite": "^4.3.5"
+    "dotenv": "^16.1.4",
+    "eslint": "^8.42.0",
+    "eslint-plugin-vue": "^9.14.1",
+    "vite": "^4.3.5",
+    "vite-plugin-eslint": "^1.8.1"
   }
 }

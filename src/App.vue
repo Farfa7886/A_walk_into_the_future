@@ -7,6 +7,7 @@ import Footer from './components/footer.vue'
 import Changelog from './components/Changelog.vue'
 import Description from './components/Description.vue'
 import Tutorial from './components/Tutorial.vue'
+import Chat from './components/Chat.vue'
 </script>
 
 <template>
@@ -29,7 +30,7 @@ import Tutorial from './components/Tutorial.vue'
                         </svg>
                     </label>
                 </div>
-                <div class="flex-1 px-2 mx-2"><p id="navBarTitle">Play game</p><ul class="menu menu-horizontal"><li id="alternative-fullscreen-btn" v-on:click="openFullscreen('embedded-game')" style="border: 3px solid whitesmoke; border-radius: 1vh; margin-left: 20px"><a><strong id="fullscreen-mobile">OPEN IN FULLSCREEN</strong></a></li></ul></div>
+                <div class="flex-1 px-2 mx-2" style="height: 10px;"><p id="navBarTitle">Play game</p><ul class="menu menu-horizontal"><li id="alternative-fullscreen-btn" v-on:click="openFullscreen('embedded-game')" style="border: 3px solid whitesmoke; border-radius: 1vh; margin-left: 20px;"><a><strong id="fullscreen-mobile">OPEN IN FULLSCREEN</strong></a></li></ul></div>
                 <div class="flex-none hidden lg:block">
                     <ul class="menu menu-horizontal">
                         <!-- Navbar menu content here -->
@@ -37,6 +38,7 @@ import Tutorial from './components/Tutorial.vue'
                         <li v-on:click="switchPage('game')"><a id="btn-play-game-pc">Play game</a></li>
                         <li v-on:click="switchPage('description')"><a id="btn-description-pc">Description</a></li>
                         <li v-on:click="switchPage('changelog')"><a id="btn-changelog-pc">Changelog</a></li>
+                        <li id="chat-is-this-ryal" onclick="chatModal.showModal()" style="margin-left: 20px"><a><strong id="">Chat</strong></a></li>
                     </ul>
                 </div>
             </div>
@@ -72,6 +74,8 @@ import Tutorial from './components/Tutorial.vue'
                 <li v-on:click="switchPage('changelog', true)"><a id="btn-changelog-mobile">Changelog</a></li>
                 <div class="divider"></div>
                 <li onclick="document.getElementById('pageContentContainer').style.display = 'none'; tutorialModal.showModal(); document.getElementById('tutorial-modal-title').scrollIntoView();"><a id="btn-open-tutorial-mobile">Open tutorial</a></li>
+                <div class="divider"></div>
+                <li id="chat-is-this-ryal" onclick="chatModal.showModal()"><a><strong id="">Chat</strong></a></li>
             </ul>
         </div>
     </div>
@@ -86,6 +90,10 @@ import Tutorial from './components/Tutorial.vue'
                 <button id="modal-tutorial-close" button class="btn btn-primary" @click="switchPage('game'); show('pageContentContainer')">Close</button>
             </div>
         </form>
+    </dialog>
+
+    <dialog id="chatModal" class="modal">
+        <Chat />
     </dialog>
 </main>
 </template>
