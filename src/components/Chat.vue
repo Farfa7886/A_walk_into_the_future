@@ -80,11 +80,10 @@ async function addMessage(sender, content) {
 }
 async function getChatReply(text, conversationID) {
 
-    return await axios.get(`https://thingproxy.freeboard.io/fetch/http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {
-        headers: {
-            "origin": "*"
-        },
-    })
+    const api = `http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`;
+    const url = 'https://corsproxy.io/?' + encodeURIComponent(api);
+
+    return await axios.get(url)
 }
 
 async function chat(text, conversationID) {

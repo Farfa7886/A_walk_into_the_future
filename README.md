@@ -25,3 +25,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Chatbot
+
+For the chatbot we used [BrainShop ai](https://brainshop.ai) + a proxy server ([corsproxy.io](https://corsproxy.io))
