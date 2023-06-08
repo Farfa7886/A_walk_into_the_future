@@ -10,7 +10,7 @@
         }
     },
 
-    
+
     "COMMENT-1": "main page",
     "fullscreen-btn": {
         "content": "Switch to fullscreen",
@@ -181,5 +181,10 @@
                 "placeholder": "Write something"
             }
         }
+    },
+
+    "chat-info-label": {
+        "content": "This chatbot needs to be trained, so its answers may not be correct",
+        "innerHTML": false
     }
 }
