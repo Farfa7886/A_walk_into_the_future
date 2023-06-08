@@ -36,7 +36,7 @@ import axios from 'axios';
 
 var chatDiv;
 var textBox;
-const uid = Math.random(10) * 8758723659782346;
+const uid = utils.mathRandomInt(1, 8753489059976320)
 
 utils.onLoad(() => {
     chatDiv = document.getElementById('chat-content');

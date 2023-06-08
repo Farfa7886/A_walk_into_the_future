@@ -4,6 +4,10 @@
         "content": "Switch to fullscreen",
         "innerHTML": false
     },
+    "fullscreen-mobile": {
+        "content": "OPEN IN FULLSCREEN",
+        "innerHTML": false
+    },
     "btn-open-tutorial-pc": {
         "content": "Open tutorial",
         "innerHTML": false
@@ -157,10 +161,23 @@
         "innerHTML": false
     },
 
-    "COMMENT-8": "mainApp",
+    "COMMENT-8": "Chat",
 
-    "fullscreen-mobile": {
-        "content": "OPEN IN FULLSCREEN",
-        "innerHTML": false
+    "chat-text-input": {
+        "specialFunctions": {
+            "setAttribute": {
+                "placeholder": "Write something"
+            }
+        }
+    },
+
+    "COMMENT-9": "html-basic-page",
+
+    "siteLang": {
+        "specialFunctions": {
+            "setAttribute": {
+                "lang": "en"
+            }
+        }
     }
 }
