@@ -81,7 +81,9 @@ async function addMessage(sender, content) {
 async function getChatReply(text, conversationID) {
 
     return await axios.get(`https://thingproxy.freeboard.io/fetch/http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {
-        rejectUnauthorized: false
+        headers: {
+            "origin": "*"
+        },
     })
 }
 
