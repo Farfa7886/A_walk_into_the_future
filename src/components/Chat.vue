@@ -11,6 +11,9 @@ import axios from 'axios';
         <h3 class="font-bold text-lg" style="margin-bottom: 50px">Chat</h3>
         <div id="chat-content" style="overflow-y: auto; height: 50vh;">
           <div class="chat chat-start"></div>
+          <div class="chat chat-start" id="g">
+            <div class="chat-bubble chat-bubble-accent"><img src="../assets/g.jpg" style="width: 300px; height: auto;"><p style="margin-top: 10px;">There is a 2% chance of getting this message</p></div>
+          </div>
           <div class="chat chat-start">
             <div class="chat-bubble chat-bubble-accent">Hi! I am a simple chatbot that can answer some of your questions!</div>
           </div>
@@ -45,6 +48,13 @@ utils.onLoad(() => {
             event.preventDefault();
         }
     });
+
+    utils.hide('g')
+
+    if (utils.mathRandomInt(1, 100) < 3) {
+        utils.show('g')
+    }
+
 })
 
 async function addMessage(sender, content) {
