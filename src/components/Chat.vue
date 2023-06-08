@@ -80,7 +80,7 @@ async function addMessage(sender, content) {
 }
 async function getChatReply(text, conversationID) {
 
-    return await axios.get(`http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {
+    return await axios.get(`https://thingproxy.freeboard.io/fetch/http://api.brainshop.ai/get?bid=175868&key=sBLSCbBmENDqgBTE&uid=${conversationID}&msg=${text}`, {
         rejectUnauthorized: false
     })
 }
@@ -90,24 +90,6 @@ async function chat(text, conversationID) {
     let reply = await getChatReply(text, conversationID)
     addMessage(false, reply.data.cnt)
 }
-
-
-(function() {
-    var cors_api_host = 'a-walk-into-the-future-proxy.vercel.app';
-    var cors_api_url = 'https://' + cors_api_host + '/';
-    var slice = [].slice;
-    var origin = window.location.protocol + '//' + window.location.host;
-    var open = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function() {
-        var args = slice.call(arguments);
-        var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
-        if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
-            targetOrigin[1] !== cors_api_host) {
-            args[1] = cors_api_url + args[1];
-        }
-        return open.apply(this, args);
-    };
-})();
 
 
 </script>
