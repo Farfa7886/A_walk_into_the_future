@@ -48,11 +48,12 @@ utils.onLoad(() => {
 })
 
 async function addMessage(sender, content) {
-    let customId = Math.floor(Math.random(5) * 75782560);
+    let customId = Math.floor(Math.random(14) * 7575873082560);
     if (content) {
         if (!utils.isEmpty(content)) {
             if (sender) {
-                chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`
+                textBoxEnabled()
+                chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`;
                 chat(content, uid);
             } 
             else {
@@ -66,7 +67,8 @@ async function addMessage(sender, content) {
         content = document.getElementById('chat-text-input').value
         if (!utils.isEmpty(content)) {
             if (sender) {
-                chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`
+                textBoxEnabled()
+                chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`;
                 chat(content, uid);
             } 
             else {
@@ -84,12 +86,28 @@ async function getChatReply(text, conversationID) {
     const url = 'https://corsproxy.io/?' + encodeURIComponent(api);
 
     return await axios.get(url)
+    .catch((error) => {
+        addMessage(false, "⚠️ Error while making the request, you can find more info in the console")
+    })
+    .finally(() => {
+        textBoxEnabled(true)
+    })
 }
 
 async function chat(text, conversationID) {
 
     let reply = await getChatReply(text, conversationID)
     addMessage(false, reply.data.cnt)
+}
+
+function textBoxEnabled(enabled) {
+    console.log(document.getElementById('chat-text-input'))
+    if (enabled) {
+        document.getElementById('chat-text-input').removeAttribute('disabled')
+    }
+    else {
+        document.getElementById('chat-text-input').setAttribute('disabled', '')
+    }
 }
 
 
