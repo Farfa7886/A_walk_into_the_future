@@ -125,11 +125,15 @@
     "COMMENT-4": "changelog content",
 
     "changelog-content-currentver": {
-        "content": "[  RE-DONE  ] Sito del contenimento del gioco (ora con il supporto completo per i telefoni)\n[   ADDED   ] Stanze per la casa visitabile\n[  IMPROVED ] Mappa\n[  IMPROVED ] Il gioco adesso si carica più velocemente dopo primo avvio (cambiata piattaforma di hosting da itch.io a netlify)\n[  IMPROVED ] Supporto per telefoni\n[  IMPROVED ] Ridotta la distanza di rendering per prestazioni migliori\n[  IMPROVED ] Muri invisibili\n[  IMPROVED ] Cartelli di guida\n[   BUGFIX  ] Gioco non si carica su alcuni dispositivi mobili",
+        "content": "[   ADDED   ] <strong>Nuova costruzione</strong>\n[   ADDED   ] Più dettagli alla mappa\n[   ADDED   ] Più etichette di informazioni\n[   BUGFIX  ] Aggiustato il bagno",
         "innerHTML": true
     },
     "changelog-content-futurever": {
-        "content": "[ CONFIRMED ] <strong>Nuova costruzione</strong>\n[ CONFIRMED ] Più dettagli alla mappa\n[ CONFIRMED ] Più etichette di informazioni\n[   BUGFIX  ] Aggiustato il bagno\n[  PROBABLY ] App per <strong>Android</strong>\n[  PROBABLY ] Suoni",
+        "content": "Pianificando...",
+        "innerHTML": true
+    },
+    "changelog-content-prevver-alpha7": {
+        "content": "[  RE-DONE  ] Sito del contenimento del gioco (ora con il supporto completo per i telefoni)\n[   ADDED   ] Stanze per la casa visitabile\n[  IMPROVED ] Mappa\n[  IMPROVED ] Il gioco adesso si carica più velocemente dopo primo avvio (cambiata piattaforma di hosting da itch.io a netlify)\n[  IMPROVED ] Supporto per telefoni\n[  IMPROVED ] Ridotta la distanza di rendering per prestazioni migliori\n[  IMPROVED ] Muri invisibili\n[  IMPROVED ] Cartelli di guida\n[   BUGFIX  ] Gioco non si carica su alcuni dispositivi mobili",
         "innerHTML": true
     },
     "changelog-content-prevver-alpha6.2": {

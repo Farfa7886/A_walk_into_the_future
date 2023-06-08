@@ -125,11 +125,15 @@
     "COMMENT-4": "changelog content",
 
     "changelog-content-currentver": {
-        "content": "[  RE-DONE  ] Game container site (now with mobile phones support)\n[   ADDED   ] Rooms for the visitable house\n[  IMPROVED ] Map\n[  IMPROVED ] Game now loads faster after first start (switched hosting platform from itch.io to netlify)\n[  IMPROVED ] Mobile support\n[  IMPROVED ] Reduced render distance for better performance\n[  IMPROVED ] Invisible walls\n[  IMPROVED ] Guidance signs\n[   BUGFIX  ] Game not loading on some mobile devices",
+        "content": "[ CONFIRMED ] <strong>New building</strong>\n[ CONFIRMED ] More details to the map\n[ CONFIRMED ] More info labels\n[   BUGFIX  ] Fixed bathroom\n[  PROBABLY ] <strong>Android</strong> app\n[  PROBABLY ] Sounds",
         "innerHTML": true
     },
     "changelog-content-futurever": {
-        "content": "[ CONFIRMED ] <strong>New building</strong>\n[ CONFIRMED ] More details to the map\n[ CONFIRMED ] More info labels\n[   BUGFIX  ] Fixed bathroom\n[  PROBABLY ] <strong>Android</strong> app\n[  PROBABLY ] Sounds",
+        "content": "Planning roadmap...",
+        "innerHTML": true
+    },
+    "changelog-content-prevver-alpha7": {
+        "content": "[  RE-DONE  ] Game container site (now with mobile phones support)\n[   ADDED   ] Rooms for the visitable house\n[  IMPROVED ] Map\n[  IMPROVED ] Game now loads faster after first start (switched hosting platform from itch.io to netlify)\n[  IMPROVED ] Mobile support\n[  IMPROVED ] Reduced render distance for better performance\n[  IMPROVED ] Invisible walls\n[  IMPROVED ] Guidance signs\n[   BUGFIX  ] Game not loading on some mobile devices",
         "innerHTML": true
     },
     "changelog-content-prevver-alpha6.2": {
