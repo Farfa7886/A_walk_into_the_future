@@ -57,36 +57,49 @@ utils.onLoad(() => {
 
 })
 
-async function addMessage(sender, content) {
-    let customId = Math.floor(Math.random(14) * 7575873082560);
-    if (content) {
-        if (!utils.isEmpty(content)) {
-            if (sender) {
-                textBoxEnabled()
-                chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`;
-                chat(content, uid);
-            } 
-            else {
-                chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-start"><div id="${customId}" class="chat-bubble chat-bubble-accent">${content}</div></div>`
+function addMessage(sender, content, loading, messageId) {
+    console.log(messageId == undefined)
+    if (messageId == undefined) {
+            let customId = utils.mathRandomInt(1, 8759423);
+            if (content) {
+            if (!utils.isEmpty(content)) {
+                if (sender) {
+                    textBoxEnabled()
+                    chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`;
+                    chat(content, uid);
+                } 
+                else {
+                    chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-start"><div id="${customId}" class="chat-bubble chat-bubble-accent">${content}</div></div>`
+                }
+                textBox.value = '';
+                document.getElementById(customId).scrollIntoView()
             }
-            textBox.value = '';
-            document.getElementById(customId).scrollIntoView()
         }
+        else {
+            content = document.getElementById('chat-text-input').value
+            if (!utils.isEmpty(content)) {
+                if (sender) {
+                    textBoxEnabled()
+                    chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`;
+                    chat(content, uid);
+                } 
+                else {
+                    if (loading) {
+                        chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-start"><div id="${customId}" class="chat-bubble chat-bubble-accent"><progress class="progress w-56"></progress></div></div>`
+                    }
+                    else {
+                        chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-start"><div id="${customId}" class="chat-bubble chat-bubble-accent">${content}</div></div>`
+                    }
+                }
+                textBox.value = '';
+                document.getElementById(customId).scrollIntoView()
+            }
+        }
+        return customId
     }
     else {
-        content = document.getElementById('chat-text-input').value
-        if (!utils.isEmpty(content)) {
-            if (sender) {
-                textBoxEnabled()
-                chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-end"><div id="${customId}" class="chat-bubble chat-bubble-info">${content}</div></div>`;
-                chat(content, uid);
-            } 
-            else {
-                chatDiv.innerHTML = chatDiv.innerHTML + `<div class="chat chat-start"><div id="${customId}" class="chat-bubble chat-bubble-accent">${content}</div></div>`
-            }
-            textBox.value = '';
-            document.getElementById(customId).scrollIntoView()
-        }
+        document.getElementById(String(messageId)).innerHTML = content
+        document.getElementById(messageId).scrollIntoView()
     }
     textBox.value = '';
 }
@@ -105,13 +118,12 @@ async function getChatReply(text, conversationID) {
 }
 
 async function chat(text, conversationID) {
-
+    const id = addMessage(false, null, true)
     let reply = await getChatReply(text, conversationID)
-    addMessage(false, reply.data.cnt)
+    addMessage(false, reply.data.cnt, false, id)
 }
 
 function textBoxEnabled(enabled) {
-    console.log(document.getElementById('chat-text-input'))
     if (enabled) {
         document.getElementById('chat-text-input').removeAttribute('disabled')
     }

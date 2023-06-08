@@ -1,4 +1,16 @@
 {
+    
+    "COMMENT-9": "html-basic-page",
+
+    "siteLang": {
+        "specialFunctions": {
+            "setAttribute": {
+                "lang": "it"
+            }
+        }
+    },
+
+    
     "COMMENT-1": "main page",
     "fullscreen-btn": {
         "content": "Utilizza schermo intero",
@@ -167,16 +179,6 @@
         "specialFunctions": {
             "setAttribute": {
                 "placeholder": "Scrivi qualcosa"
-            }
-        }
-    },
-
-    "COMMENT-9": "html-basic-page",
-
-    "siteLang": {
-        "specialFunctions": {
-            "setAttribute": {
-                "lang": "it"
             }
         }
     }
