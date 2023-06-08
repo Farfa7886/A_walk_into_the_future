@@ -29,7 +29,7 @@
             <div class="collapse bg-base-200 collapse-arrow border border-base-300">
                 <input type="checkbox" /> 
                 <div class="collapse-title text-xl font-medium">
-                    ALPHA 6.1
+                    ALPHA 6.0
                 </div>
                 <div class="collapse-content eeee"> 
                     <pre id="changelog-content-prevver-alpha6">
