@@ -125,11 +125,15 @@
     "COMMENT-4": "changelog content",
 
     "changelog-content-currentver": {
-        "content": "[   ADDED   ] <strong>Nuova costruzione</strong>\n[   ADDED   ] Più dettagli alla mappa\n[   ADDED   ] Più etichette di informazioni\n[   BUGFIX  ] Aggiustato il bagno",
+        "content": "<strong>Versione stabile</strong>",
         "innerHTML": true
     },
     "changelog-content-futurever": {
-        "content": "Pianificando...",
+        "content": "Non pianificata (probabilmente non arriverà)",
+        "innerHTML": true
+    },
+    "changelog-content-prevver-alpha8": {
+        "content": "[   ADDED   ] <strong>Nuova costruzione</strong>\n[   ADDED   ] Più dettagli alla mappa\n[   ADDED   ] Più etichette di informazioni\n[   BUGFIX  ] Aggiustato il bagno",
         "innerHTML": true
     },
     "changelog-content-prevver-alpha7": {

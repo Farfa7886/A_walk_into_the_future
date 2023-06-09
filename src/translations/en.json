@@ -125,11 +125,15 @@
     "COMMENT-4": "changelog content",
 
     "changelog-content-currentver": {
-        "content": "[ CONFIRMED ] <strong>New building</strong>\n[ CONFIRMED ] More details to the map\n[ CONFIRMED ] More info labels\n[   BUGFIX  ] Fixed bathroom\n[  PROBABLY ] <strong>Android</strong> app\n[  PROBABLY ] Sounds",
+        "content": "<strong>Stable release</strong>",
         "innerHTML": true
     },
     "changelog-content-futurever": {
-        "content": "Planning roadmap...",
+        "content": "Not planned (probably will not arrive)",
+        "innerHTML": true
+    },
+    "changelog-content-prevver-alpha8": {
+        "content": "[ CONFIRMED ] <strong>New building</strong>\n[ CONFIRMED ] More details to the map\n[ CONFIRMED ] More info labels\n[   BUGFIX  ] Fixed bathroom\n[  PROBABLY ] <strong>Android</strong> app\n[  PROBABLY ] Sounds",
         "innerHTML": true
     },
     "changelog-content-prevver-alpha7": {

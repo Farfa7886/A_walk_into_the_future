@@ -2,6 +2,19 @@
 </script>
 
 <template>
+      <div class="collapse bg-base-200 collapse-arrow border border-base-300 changelog-card">
+      <input type="checkbox" />
+      <div class="collapse-title text-xl font-medium"> ALPHA 8 </div>
+      <div class="collapse-content eeee">
+        <pre id="changelog-content-prevver-alpha8">
+[   ADDED   ] <strong>New building</strong>
+[   ADDED   ] More details to the map
+[   ADDED   ] More info labels
+[   BUGFIX  ] Fixed bathroom
+        </pre>
+      </div>
+    </div>
+  <!-- SEPARATOR -->
     <div class="collapse bg-base-200 collapse-arrow border border-base-300 changelog-card">
       <input type="checkbox" />
       <div class="collapse-title text-xl font-medium"> ALPHA 7 </div>
