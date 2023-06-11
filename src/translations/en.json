@@ -190,9 +190,4 @@
             }
         }
     },
-
-    "chat-info-label": {
-        "content": "This chatbot needs to be trained, so its answers may not be correct",
-        "innerHTML": false
-    }
 }
